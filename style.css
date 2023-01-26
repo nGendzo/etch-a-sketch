@@ -3,10 +3,38 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(243, 243, 243);
+}
+#header {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-#ask-size-button {
-margin: auto;
+#sub-text {
+    margin: 0;
+}
+
+#erase-button {
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    padding: 7px 15px;
+    color: white;
+    background-color: rgb(42, 167, 240);
+    border: 1px solid rgb(243, 243, 243);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+#erase-button:hover {
+    background-color: white;
+    color: rgb(42, 167, 240);
+    border: 1px solid rgb(42, 167, 240);
 }
 
 .grid-container {
