@@ -1,17 +1,16 @@
 const gridDiv = document.querySelector('.grid-container');
-const askSizeButton = document.querySelector('#ask-size-button');
+const eraseButton = document.querySelector('#erase-button')
 const gridDivForDim = document.getElementById('grid-id');
-let userChoice = 16;
-const squareSize = (gridDivForDim.offsetWidth - 4) / userChoice;
-console.log(squareSize);
+let userChoice = 48;
+
+let squareSize = (gridDivForDim.offsetWidth - 4) / userChoice;
 
 createCanvas(userChoice);
 
-askSizeButton.addEventListener('click', () => {
-    userChoice = prompt("How many squares per side?");
-    if (userChoice <= 64){
-        createCanvas(userChoice);
-    }else alert("Please enter a number below or equal to 64!");
+eraseButton.addEventListener('click', () => {
+    eachSquare.forEach((eachSquare) => {
+        eachSquare.setAttribute('style', `background-color: white; width: ${squareSize}px; height: ${squareSize}px;`)
+    })
 });
 
 function createCanvas(userChoice){
